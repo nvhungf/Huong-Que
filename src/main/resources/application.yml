@@ -1,0 +1,40 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /huong-que/api
+
+spring:
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    username: db_a7d8f6_huongqueapp_admin
+    password: Huongque123*
+    url: jdbc:sqlserver://sql5105.site4now.net:1433;database=db_a7d8f6_huongqueapp
+    
+### oauth
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId: 900484079467-2r2vjk7ibb260umt39ncdrd94km7hhs1.apps.googleusercontent.com
+            clientSecret: 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
+
+
+  ###### Email Properties ######
+  mail:
+    default-encoding: UTF-8
+    host: smtp.gmail.com
+    port: 587
+    username: huongqueteam@gmail.com
+    password: Huongque123*
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    protocol: smtp
+    test-connection: false
+
+cors:
+  allows: http://localhost:8000, https://huong-que-fe.herokuapp.com/
